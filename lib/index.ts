@@ -61,7 +61,6 @@ class MetricSiPrefixes {
     else return `i${this.handleInteger(str)}`
   }
 
-
   public static getPrefixeSymbol(arg: number): MetricSiSymbol {
     if (!arg) throw new Error('arg must be a number')
 

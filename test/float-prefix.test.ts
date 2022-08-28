@@ -1,11 +1,7 @@
 import MetricSiPrefixes from '../lib';
 
-describe('MetricSiPrefixes', () => {
-
-  it('Should return i3', () => {
-    const category = MetricSiPrefixes.getPrefixCategory('1000')
-    expect(category).toEqual('i3')
-  })
+describe('=== FLOAT MetricSiPrefixes === ', () => {
+  // --------------------- TEST CATEGORY PREFIX ---------------------
   // it('Should return f - with dot', () => {
   //   const category = MetricSiPrefixes.getPrefixCategory('0,234')
   //   expect(category).toEqual('f')
@@ -15,7 +11,7 @@ describe('MetricSiPrefixes', () => {
   //   expect(category).toEqual('f')
   // })
 
-
+  // --------------------- TEST INTEGER PREFIX ---------------------
   it('Symbol should be yotta', () => {
     const nb = 1000000000000000000000000
     const prefix = MetricSiPrefixes.getPrefixeSymbol(nb)
@@ -70,7 +66,6 @@ describe('MetricSiPrefixes', () => {
     expect(prefix.symbol).toEqual('h')
     expect(prefix.symbolName).toEqual('hecto')
   })
-
   it('Symbol should be deca', () => {
     const nb = 10
     const prefix = MetricSiPrefixes.getPrefixeSymbol(nb)
@@ -83,6 +78,4 @@ describe('MetricSiPrefixes', () => {
     expect(prefix.symbol).toEqual('')
     expect(prefix.symbolName).toEqual('')
   })
-
-
 })
